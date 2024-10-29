@@ -1,6 +1,7 @@
 h1{
 
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 35px;
 
 }
 
@@ -11,5 +12,7 @@ h2{
   background-color: cadetblue;
 }
 p{
-  color: darkgrey;
+  color: rgb(90, 23, 121);
+  border: 10px inset;
+  border-color: rgb(21, 20, 22);
 }
