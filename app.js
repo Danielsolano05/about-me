@@ -11,8 +11,21 @@ if (userResponse) {
     console.log('User selected No.');
 }
 let userChoose =confirm('was I born in 2005')
-if (userChoose){
-  console.Log('user selected yes.')
+if (userChoose) {
+    console.log('user chose yes.');
 }else {
-  console.log('user selected no.');
+  console.log('user chose no.');
+}
+let pasion = prompt ('what is one of my pasions' );
+{
+  switch (pasion.toLowerCase()) {
+     case 'baking':
+      console.log('my favorit pasion is baking');
+      break;
+      case 'cooking':
+        console.log('my favorit pasiom is cooking');
+        break
+        default:
+          console.log('you don\'t know what my favorit pasion is');
+  }
 }
