@@ -8,11 +8,11 @@ font-size: 35px;
 h2{
  
   border-color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border: 10px groove #5e4eac;
-  background-color: cadetblue;
+  border: 10px groove #e37474;
+  background-color: rgb(96, 98, 98);
 }
 p{
-  color: rgb(90, 23, 121);
+  color: rgb(46, 41, 13);
   border: 10px inset;
   border-color: rgb(21, 20, 22);
 }

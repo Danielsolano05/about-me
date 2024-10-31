@@ -1,4 +1,5 @@
 'use strict';
+let userpoints =0;
 let userName = prompt("What is your name?");
 if (userName) {
   alert("Hello, " + userName + "!");
@@ -31,20 +32,20 @@ let pasion = prompt ('what is one of my pasions' );
           alert('you don\'t know what my favorit pasion is');
   }
 }
-let birth =prompt ('was I born in Oregon');
-{
-switch (birth.toLocaleLowerCase) {
-  case 'yes I was':
-    alert('you are Wrong')
+let birth = prompt('Was I born in Oregon?'); 
+
+switch (birth.toLocaleLowerCase()) {
+  case 'yes':
+    alert('You are wrong');
     break;
-    case 'no ':
-      alert('corrrect I was infact not born in Oregon')
+  case 'no':
+    alert('Correct! I was not born in Oregon');
+    break;
   default:
-  alert('I was not born in Oregon')
+    alert('I was not born in Oregon');
+    break;
 }
 
-
-}
 const guessingNumber = 19;
 let guess =6;
 while (guess !== guessingNumber) {
@@ -63,8 +64,24 @@ while (guess !== guessingNumber) {
         alert('Please enter a valid number.');
     }
 }
-let answer = prompt('is daniel favorit activity sleeping.').toLowerCase();
-console.log(answer)
-
+// Array of valid activities
 let activities = ['sleeping', 'baking', 'cooking', 'watching TV'];
-console.log(activities); // Output: ['sleeping', 'baking', 'cooking', 'watching TV']
+
+// Prompt the user for their answer
+let answer = prompt('What is Daniel\'s favorite activity?').toLowerCase();
+console.log(answer);
+
+// Check if the answer is one of the correct activities
+if (activities.includes(answer)) {
+   
+  alert('Correct! That is one of Daniel\'s favorite activities.');
+} else {
+   alert('Incorrect. Please choose one of the following: sleeping, baking, cooking, watching TV.');
+}
+
+// Display all valid activities
+console.log('Daniel\'s favorite activities are:');
+for (let i = 0; i < activities.length; i++) {
+    console.log(activities[i]);
+}
+
