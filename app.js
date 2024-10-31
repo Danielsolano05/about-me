@@ -19,17 +19,18 @@ if (userChoose) {
 }else {
   alert('user chose no.');
 }
-let pasion = prompt ('what is one of my pasions' );
+let passion = prompt ('what is one of my pasions' );
 {
-  switch (pasion.toLowerCase()) {
+  switch (passion.toLowerCase()) {
      case 'baking':
-     alert('my favorit pasion is baking');
+     alert('my favorit passion is baking');
+     userPoints++;
       break;
       case 'cooking':
-        alert('my favorit pasiom is cooking');
+        alert('my favorit passion is cooking');
         break
         default:
-          alert('you don\'t know what my favorit pasion is');
+          alert('you don\'t know what my favorit passion is');
   }
 }
 let birth = prompt('Was I born in Oregon?'); 
@@ -46,13 +47,25 @@ switch (birth.toLocaleLowerCase()) {
     break;
 }
 
-const guessingNumber = 19;
-let guess =6;
-while (guess !== guessingNumber) {
+const guessingNumber = 19; // The number to guess
+let guess; // Variable to hold the user's guess
+let attempts = 0; // Counter for the number of attempts
+const maxAttempts = 6; // Maximum number of attempts
+
+while (attempts < maxAttempts) {
     // Prompt the user to enter a guess and convert it to an integer
     guess = parseInt(prompt("Guess the number:"), 10);
-
     
+    // Check if the guess is a valid number
+    if (isNaN(guess)) {
+        alert('Please enter a valid number.');
+        continue; // Skip to the next iteration of the loop
+    }
+
+    // Increment the attempts counter
+    attempts++;
+
+    // Check if the guess is correct
     if (guess === guessingNumber) {
         alert('Correct! You have guessed the correct number.');
         break; // Exit the loop if the guess is correct
@@ -60,10 +73,14 @@ while (guess !== guessingNumber) {
         alert('Too high, try again.');
     } else if (guess < guessingNumber) {
         alert('Too low, try again.');
-    } else {
-        alert('Please enter a valid number.');
+    }
+
+    // Check if maximum attempts have been reached
+    if (attempts === maxAttempts) {
+        alert('Sorry, you have used all your attempts. The correct number was ' + guessingNumber + '.');
     }
 }
+
 // Array of valid activities
 let activities = ['sleeping', 'baking', 'cooking', 'watching TV'];
 
@@ -79,9 +96,10 @@ if (activities.includes(answer)) {
    alert('Incorrect. Please choose one of the following: sleeping, baking, cooking, watching TV.');
 }
 
-// Display all valid activities
+// Display all valid activities 
 console.log('Daniel\'s favorite activities are:');
 for (let i = 0; i < activities.length; i++) {
     console.log(activities[i]);
 }
 
+alert ('you have' + userpoints + 'points.')
