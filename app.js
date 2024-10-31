@@ -45,4 +45,26 @@ switch (birth.toLocaleLowerCase) {
 
 
 }
+const guessingNumber = 19;
+let guess =6;
+while (guess !== guessingNumber) {
+    // Prompt the user to enter a guess and convert it to an integer
+    guess = parseInt(prompt("Guess the number:"), 10);
 
+    
+    if (guess === guessingNumber) {
+        alert('Correct! You have guessed the correct number.');
+        break; // Exit the loop if the guess is correct
+    } else if (guess > guessingNumber) {
+        alert('Too high, try again.');
+    } else if (guess < guessingNumber) {
+        alert('Too low, try again.');
+    } else {
+        alert('Please enter a valid number.');
+    }
+}
+let answer = prompt('is daniel favorit activity sleeping.').toLowerCase();
+console.log(answer)
+
+let activities = ['sleeping', 'baking', 'cooking', 'watching TV'];
+console.log(activities); // Output: ['sleeping', 'baking', 'cooking', 'watching TV']
